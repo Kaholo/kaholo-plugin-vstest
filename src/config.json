@@ -1,0 +1,59 @@
+{
+  "name": "VSTest",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "logo.png",
+  "version": "1.0.0",
+  "description": "VSTest executer (Windows Only)",
+  "settings": [
+    {
+      "name": "exePath",
+      "viewName": "VSTest EXE path",
+      "type": "string"
+    }
+  ],
+  "methods": [
+    {
+      "name": "runTest",
+      "viewName": "Run Test",
+      "params": [
+        {
+          "name": "testFiles",
+          "viewName": "Test Files",
+          "type": "string"
+        },
+        {
+          "name": "settings",
+          "viewName": "Settings",
+          "type": "string"
+        },
+        {
+          "name": "tests",
+          "viewName": "Tests",
+          "type": "string"
+        },
+        {
+          "name": "enableCodeCoverage",
+          "viewName": "Enable Code Coverage",
+          "type": "boolean"
+        },
+        {
+          "name": "parallel",
+          "viewName": "Parallel",
+          "type": "boolean"
+        },
+        {
+          "name": "inIsolation",
+          "viewName": "In Isolation",
+          "type": "boolean"
+        },
+        {
+          "name": "cliArgs",
+          "viewName": "CLI Args",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

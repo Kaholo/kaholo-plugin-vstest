@@ -2,17 +2,22 @@ const child_process = require("child_process")
 
 function runTest(action, settings) {
     return new Promise((resolve, reject) => {
-        var vstestPath = settings.exePath;
+        var vstestPath = `"${settings.exePath}"`;
         var testFiles = _handleStringArray(action.params.testFiles);
         var cliArgs = action.params.cliArgs;
 
         if (!Array.isArray(testFiles))
             return reject("Test Files must be either a string or an array");
 
+
+        testFiles.forEach(testFile=>{
+            testFile = `"${testFile.replace(new RegExp('\\', 'g'), '\\\\')}"`
+        })
+
         var inIsolation = action.params.inIsolation;
         var parallel = action.params.parallel;
         var testSettings = action.params.settings;
-        var testsNames = action.params.tests;
+        var testsNames = _handleStringArray(action.params.tests);
         var enableCodeCoverage = action.params.enableCodeCoverage;
 
 

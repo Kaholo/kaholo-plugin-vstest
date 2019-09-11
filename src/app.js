@@ -10,8 +10,8 @@ function runTest(action, settings) {
             return reject("Test Files must be either a string or an array");
 
 
-        testFiles.forEach(testFile=>{
-            testFile = `"${testFile.replace(new RegExp('\\', 'g'), '\\\\')}"`
+        testFiles = testFiles.map(testFile=>{
+            return `"${testFile}"`
         })
 
         var inIsolation = action.params.inIsolation;

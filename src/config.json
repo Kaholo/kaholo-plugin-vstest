@@ -9,7 +9,7 @@
   "settings": [
     {
       "name": "exePath",
-      "viewName": "VSTest EXE path",
+      "viewName": "VSTest EXE Path",
       "type": "string"
     }
   ],
@@ -21,7 +21,7 @@
         {
           "name": "testFiles",
           "viewName": "Test Files",
-          "type": "string"
+          "type": "text"
         },
         {
           "name": "settings",
@@ -31,7 +31,7 @@
         {
           "name": "tests",
           "viewName": "Tests",
-          "type": "string"
+          "type": "text"
         },
         {
           "name": "enableCodeCoverage",

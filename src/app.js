@@ -12,7 +12,7 @@ async function runTest(action, settings) {
     const testsNames = handleStringArray(action.params.tests);
 
     if (testSettings) args.push(`/Settings:${testSettings}`)
-    if (testsNames) args.push(`/Tests:${testsNames.join(',')}`)
+    if (testsNames.length > 0) args.push(`/Tests:${testsNames.join(',')}`)
     if (action.params.enableCodeCoverage) args.push('/Enablecodecoverage')
     if (action.params.inIsolation) args.push('/InIsolation')
     if (action.params.parallel) args.push('/Parallel')

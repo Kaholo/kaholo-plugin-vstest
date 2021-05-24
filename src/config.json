@@ -4,12 +4,12 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "logo.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VSTest executer (Windows Only)",
   "settings": [
     {
       "name": "exePath",
-      "viewName": "VSTest EXE path",
+      "viewName": "VSTest EXE Path",
       "type": "string"
     }
   ],
@@ -21,7 +21,7 @@
         {
           "name": "testFiles",
           "viewName": "Test Files",
-          "type": "string"
+          "type": "text"
         },
         {
           "name": "settings",
@@ -31,7 +31,7 @@
         {
           "name": "tests",
           "viewName": "Tests",
-          "type": "string"
+          "type": "text"
         },
         {
           "name": "enableCodeCoverage",

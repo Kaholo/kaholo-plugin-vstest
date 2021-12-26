@@ -4,7 +4,7 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "logo.png",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "VSTest executer (Windows Only)",
   "settings": [
     {
@@ -55,5 +55,6 @@
         }
       ]
     }
-  ]
+  ],
+  "category": "TESTING"
 }
